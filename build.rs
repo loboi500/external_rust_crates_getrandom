@@ -1,14 +1,3 @@
-#![deny(warnings)]
-
-use std::env;
-
-fn main() {
-    let target = env::var("TARGET").expect("TARGET was not set");
-    if target.contains("windows") {
-        // for BCryptGenRandom
-        println!("cargo:rustc-link-lib=bcrypt");
-    } else if target.contains("apple-ios") {
-        // for SecRandomCopyBytes and kSecRandomDefault
-        println!("cargo:rustc-link-lib=framework=Security");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:adc6d187b6420d1ba08504337b63d6367738b40ac80df5d2b7beb03830cd63bb
+size 399
